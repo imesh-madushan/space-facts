@@ -9,10 +9,36 @@ body {
 }
 
 .container {
-    background-color: white;
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0); /* Subtle gradient for container */
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient for heading */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+button {
+    padding: 10px;
+    background: linear-gradient(to right, #007BFF, #0056b3); /* Gradient for button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(to right, #0056b3, #003f7f); /* Darker gradient on hover */
+}
+
+#factDisplay {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
 }
