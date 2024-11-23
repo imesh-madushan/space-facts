@@ -1,17 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fun Facts</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="fun-facts-container">
-        <h2>Fun Facts</h2>
-        <button id="fetchFactButton">Get a Fun Fact</button>
-        <p id="factDisplay"></p>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
+// Array of predefined fun facts
+const funFacts = [
+    "Honey never spoils.",
+    "Bananas are berries, but strawberries aren't.",
+    "A day on Venus is longer than a year on Venus.",
+    "Octopuses have three hearts.",
+    "The Eiffel Tower can be 15 cm taller during the summer."
+];
+
+// Function to get a random fact
+function getRandomFact() {
+    const randomIndex = Math.floor(Math.random() * funFacts.length);
+    return funFacts[randomIndex];
+}
+
+// Event listener for button click
+document.getElementById('fetchFactButton').addEventListener('click', function() {
+    const fact = getRandomFact();
+    document.getElementById('factDisplay').textContent = fact;
+});
